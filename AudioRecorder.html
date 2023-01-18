@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- @*Add axios:*@ -->
+		<script src="./js/axios.min.js"></script>
+
+		<!-- @*jqeury*@ -->
+		<script src="./js/jquery-3.6.0.js"></script>
+		<script src='./js/jquery.min.js'></script>
+		<script src='./js/jquery-ui.min.js'></script>
+		
+		<!-- @*Add axios:*@ -->
+		<script src="./js/audio-recorder.js"></script>
+
+		<style>
+			.pids-wrapper{
+				width: 30%;
+				height: 20%;
+				border: solid;
+				border-color: darkcyan;
+				background-color: ivory;
+			}
+			.pid{
+				width: calc(10% - 15px);
+				height: 10px;
+				display: inline-block;
+				margin: 5px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<a id="download">DownloadFile</a>
+		<div id="draggable" class="pids-wrapper ui-widget-content" style="position: fixed; z-index: 2147483647;">
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div class="pid"></div>
+			<div>
+				<span>　麥克風音量：</span>
+				<span id="mic_vol"></span>
+			</div>
+			<div>　麥克風音量 ≥35 時開始錄音， < 5 時結束錄音</div>
+			<p style="color: darkcyan;">　錄音時，麥克風音量數值會改變顏色顯示</p>
+			<p style="color: orangered;">　※本顯示框可以進行拖曳</p>
+		</div>
+	</body>
+</html>
+<script>
+	const downloadLink = document.getElementById('download');
+</script>
